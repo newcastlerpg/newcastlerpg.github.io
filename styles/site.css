@@ -1,0 +1,12 @@
+body {
+    font-size: 80%;
+    font-weight: 400;
+}
+
+a {
+    color: #000000;
+}
+
+.social-links a {
+    font-size: 100%;
+}
