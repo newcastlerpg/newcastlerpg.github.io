@@ -20,6 +20,21 @@ var Storage = (function () {
             cost: 'free',
             tags: ['near metro', 'private room', 'pub']
         },
+        {
+            title: 'Heaton Games Society',
+            description: '',
+            when : 'Weekly on Sunday at 4pm',
+            location: {
+                title: 'Heaton Community Centre',
+                address: '61 Trewhitt Rd, Newcastle upon Tyne NE6 5DY',
+                map: 'https://goo.gl/maps/uCw1H1A1Lme4C2GD7'
+            },
+            links: [
+                { title: 'Facebook', url: 'https://www.facebook.com/groups/heaton.games.society' }
+            ],
+            cost: 'paid',
+            tags: ['d&amp;d adventurers league', 'private room']
+        },
     ];
 
 	return {
