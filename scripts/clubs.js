@@ -90,7 +90,7 @@ var SettingsPage = (function () {
 
 		return `<a class="map-link" href="${setting.location.map}" target="_blank" title="Google maps"><i class="fas fa-external-link-alt"></i></a>`;
 	}
-
+  
 	buildLinks = function(links) {
 		var anchorText = '';
 		links.forEach(link => {
