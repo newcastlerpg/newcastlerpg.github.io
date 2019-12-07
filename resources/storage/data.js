@@ -54,6 +54,24 @@ var Storage = (function () {
             cost: 'free',
             tags: ['students only', 'private room']
         },
+        {
+            title: 'Meeple Perk',
+            description: `Meeple Perk is Newcastle's first dedicated board games cafe! Switch off from the digital world and enjoy the company of your friends with a 
+                board game!`,
+            when : 'Weekly on Thursday at 6pm, as well as random events posted on their facebook page',
+            location: {
+                title: 'Meeple Perk',
+                address: '89 Clayton St, Newcastle upon Tyne NE1 5PZ',
+                map: 'https://g.page/MeeplePerk?share'
+            },
+            links: [
+                { title: 'Facebook', url: 'https://www.facebook.com/MeeplePerk/' },
+                { title: 'Twitter', url: 'https://twitter.com/MeeplePerk' }
+            ],
+            logo: 'meeple-perk-logo.jpg',
+            cost: '£1.50 (members), £3.00 (non-members)',
+            tags: ['cafe']
+        },
     ];
 
 	return {
