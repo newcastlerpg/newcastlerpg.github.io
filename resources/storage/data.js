@@ -35,6 +35,25 @@ var Storage = (function () {
             cost: 'paid',
             tags: ['d&amp;d adventurers league', 'private room']
         },
+        {
+            title: 'Newcastle University Tabletop Society',
+            description: `Weekly meetings where fans of role-playing games, card games, and miniature war games can meet and play in a controlled and fun environment.
+                We offer 2-3 Magic the Gathering Drafts to our members free of charge, host a long-term shared world campaign for D&D players and Warhammer 40K games.`,
+            when : 'Weekly on Wednesday at 1pm',
+            location: {
+                title: 'Newcastle University Students Union',
+                address: 'Kings Walk Newcastle upon Tyne NE1 8QB',
+                map: 'https://goo.gl/maps/woFVTYWbcKfdofVD6'
+            },
+            links: [
+                { title: 'Discord', url: 'https://discord.gg/hN4QMnE' },
+                { title: 'Facebook', url: 'https://www.facebook.com/groups/6093093358' },
+                { title: 'Website', url: 'https://www.nusu.co.uk/getinvolved/societies/society/nerdsoc/' }
+            ],
+            logo: 'nets-logo.png',
+            cost: 'free',
+            tags: ['students only', 'private room']
+        },
     ];
 
 	return {
