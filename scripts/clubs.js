@@ -5,7 +5,9 @@ var SettingsPage = (function () {
 	}
 
 	initSettings = function() {
-		var settings = Storage.clubs;
+		var settings = Storage.clubs.sort((a, b) => {
+			return a.title > b.title ? 1 : -1;
+		});
 	
 		// Bind club details
 		settings.forEach(setting => {
@@ -24,9 +26,8 @@ var SettingsPage = (function () {
 						<h4 class="col-md-10">
 							${setting.title}
 						</h4>
-						<h4 class="col-md-2 social-links">${buildLinks(setting.links)}</h4>
 					</div>
-					
+					${buildLogo(setting)}
 					<p class="pb-3 pt-3 mb-0">
 						${setting.description}
 					</p>
@@ -39,13 +40,57 @@ var SettingsPage = (function () {
 						<address class="col-md-10 mb-0">
 							<strong>${setting.location.title}</strong><br />
 							${setting.location.address} 
-							<a class="map-link" href="${setting.location.map}" target="_blank" title="Google maps"><i class="fas fa-external-link-alt"></i></a>
+							${buildGoogleMapsLink(setting)}
 						</address>
-					</div>					
+					</div>
+					<div class="social-links text-center">
+						${buildLinks(setting.links)}
+					</div>
+					<div class="tags">
+						${buildCost(setting)}
+						${buildTags(setting)}
+					</div>
 					<small class="d-block text-right mt-3"></small>
 				</div>`
 	}
 
+	buildCost = function(setting) {
+		if (setting.cost === 'free') {
+			return `<span class="badge badge-success text-right">free</span>`;
+		} else if (setting.cost === 'paid') {
+			return `<span class="badge badge-danger text-right">paid</span>`;
+		} else if (setting.cost) {
+			return `<span class="badge badge-danger text-right">${setting.cost}</span>`;
+		} else {
+			return `<span class="badge badge-secondary text-right">unknown cost</span>`;
+		}
+	}
+
+	buildTags = function(setting) {
+		var tags = '';
+		setting.tags.forEach(tag => {
+			tags += ` <span class="badge badge-info text-right">${tag}</span>`;
+		});
+
+		return tags;
+	}
+
+	buildLogo = function(setting) {
+		if (!setting.logo) {
+			return '';
+		}
+
+		return `<img class="logo row" src="./resources/logo/${setting.logo}" alt="${setting.title} logo" />`;
+	}
+
+	buildGoogleMapsLink = function(setting) {
+		if (!setting.location.map) {
+			return '';
+		}
+
+		return `<a class="map-link" href="${setting.location.map}" target="_blank" title="Google maps"><i class="fas fa-external-link-alt"></i></a>`;
+	}
+  
 	buildLinks = function(links) {
 		var anchorText = '';
 		links.forEach(link => {
@@ -57,6 +102,9 @@ var SettingsPage = (function () {
 					break;
 				case 'facebook':
 					iconClass = "fab fa-facebook";
+					break;
+				case 'twitter':
+					iconClass = "fab fa-twitter";
 					break;
 			}
 
