@@ -1,7 +1,18 @@
 var IndexPage = (function () {
 	
 	init = function() {
-		$('#current-year').html((new Date()).getFullYear());
+		return new Vue({
+			el: '#main',
+			data: {
+				clubs: getSortedClubList()
+			}
+		});
+	}
+
+	getSortedClubList = function() {
+		return Storage.clubs.sort((a, b) => {
+			return a.title > b.title ? 1 : -1;
+		});
 	}
 
 	return {
@@ -10,5 +21,5 @@ var IndexPage = (function () {
 })();
 
 $( document ).ready(function() {
-	IndexPage.init();
+	var app = IndexPage.init();
 });
