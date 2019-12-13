@@ -72,6 +72,24 @@ var Storage = (function () {
             cost: '£1.50 (members), £3.00 (non-members)',
             tags: ['cafe']
         },
+        {
+            title: 'Northumbria University Gaming & Roleplaying Society',
+            description: `Host a wide variety of role-plays, such as Dungeons & Dragons and Pathfinder. Throughout the year we also run 12 hour roleplays, and often weekly 
+                standalone role-plays!`,
+            when : 'Weekly on Wednesday at 1pm',
+            location: {
+                title: 'Reds Bar',
+                address: '2 Sandyford Rd, Newcastle upon Tyne NE1 8SB',
+                map: 'https://goo.gl/maps/faaJUcLbYoW55T7P8'
+            },
+            links: [
+                { title: 'Facebook', url: 'https://www.facebook.com/groups/NorthumbriaGRP' },
+                { title: 'Website', url: 'https://www.mynsu.co.uk/getinvolved/society/gaming/' }
+            ],
+            logo: 'grp-logo.png',
+            cost: '£3.00',
+            tags: ['students only']
+        },
     ];
 
 	return {
