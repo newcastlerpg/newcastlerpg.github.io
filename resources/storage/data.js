@@ -33,7 +33,7 @@ var Storage = (function () {
                 { title: 'Facebook', url: 'https://www.facebook.com/groups/heaton.games.society' }
             ],
             cost: 'paid',
-            tags: ['d&amp;d adventurers league', 'private room']
+            tags: ['d&d adventurers league', 'private room']
         },
         {
             title: 'Newcastle University Tabletop Society',
