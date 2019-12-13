@@ -32,7 +32,7 @@ var Storage = (function () {
             links: [
                 { title: 'Facebook', url: 'https://www.facebook.com/groups/heaton.games.society' }
             ],
-            cost: 'paid',
+            cost: '£1.50',
             tags: ['d&d adventurers league', 'private room']
         },
         {
@@ -88,7 +88,7 @@ var Storage = (function () {
             ],
             logo: 'grp-logo.png',
             cost: '£3.00',
-            tags: ['students only']
+            tags: ['students only', 'pub']
         },
         {
             title: 'Wallsend Adventurers and Role Players',
