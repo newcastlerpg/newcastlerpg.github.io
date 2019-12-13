@@ -90,6 +90,22 @@ var Storage = (function () {
             cost: '£3.00',
             tags: ['students only']
         },
+        {
+            title: 'Wallsend Adventurers and Role Players',
+            description: `WARP stands for Wallsend Adventure Role Players and is the name of a games and gaming club that was formed in the late 80's and is still going strong today.`,
+            when : 'Weekly on Sunday at 12pm',
+            location: {
+                title: 'Walkerville Community Centre',
+                address: '6 Pinewood Close, Walkerville, Newcastle upon Tyne, NE6 4SZ',
+                map: 'https://g.page/walkervillecommunitycentre?share'
+            },
+            links: [
+                { title: 'Website', url: 'http://www.warp-club.com/' }
+            ],
+            logo: 'warp-logo.jpg',
+            cost: '£5 (£3.50 concessions)',
+            tags: ['private room']
+        },
     ];
 
 	return {
